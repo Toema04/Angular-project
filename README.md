@@ -1,27 +1,104 @@
-# Dashboard
+# Angular Dashboard Evaluation Task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+## 1. Project Overview
+The Angular Dashboard is a responsive, dynamic interface designed for business or organizational data representation. It includes features like charts, data tables, filtering, and a calendar for date range selection, providing a comprehensive view of user statistics and operational metrics.
 
-## Development server
+### Purpose
+The dashboard allows users to monitor various data insights and perform actions such as data filtering, searching, and downloading reports.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 2. Technology Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: Framework used to build the application.
+- **PrimeNG**: UI components library for creating tables, charts, and dropdowns.
+- **ECharts**: Data visualization library for generating interactive charts.
+- **TypeScript**: The language used to build the application.
+- **GitHub Pages**: For deployment of the application.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 3. Installation & Setup
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Node.js** (v14 or higher)
+- **Angular CLI** (v13 or higher)
+- **Git** installed on your system
 
-## Running end-to-end tests
+### Steps to Set Up Locally
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository from GitHub:
 
-## Further help
+```bash
+git clone https://github.com/your-repo/angular-dashboard.git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Navigate to the project directory:
+    
+```bash
+cd angular-dashboard
+```
+3. Install the dependencies:
+
+```bash
+npm install
+```
+4. Run the project locally:
+
+```bash
+ng serve
+```
+The dashboard will be accessible at `http://localhost:4200/`.
+
+## 4. Features & Components
+
+* **Dashboard Cards**: Displaying quick metrics like total users, active sessions, etc.
+* **Data Tables**: Interactive tables with pagination, sorting, and filtering options.
+* **Charts**: Visual representation of data using ECharts (e.g., line charts, pie charts).
+* **Calendar**: Used for selecting a date range for viewing specific data.
+* **User Management**: Ability to filter and search users, with download options for user reports.
+
+## 5. GitHub Pages Deployment
+
+The application is deployed to GitHub Pages for easy access and review. Here’s how it was deployed:
+
+### Steps
+
+1. Ensure the `angular.json` file has the following configuration in the `projects` section:
+
+```json
+"architect": {
+    "build": {
+        "options": {
+            "outputPath": "docs",
+            "baseHref": "/angular-dashboard/"
+        }
+    }
+}
+```
+
+2. Build the project for production:
+
+```bash
+ng build --prod --output-path docs --base-href /angular-dashboard/
+```
+
+3. Push the `docs` folder to the `gh-pages` branch of the repository.
+
+4. Enable GitHub Pages for the repository by setting the source to the `gh-pages` branch.
+
+
+Access the deployed version here: (Angular Dashboard)[]
+
+## 6. Evaluation Instructions
+
+### Key Features to Evaluate:
+
+* Responsiveness: Test on both desktop and mobile.
+* Data Interactivity: Filter, sort, and paginate tables.
+* Charts: Ensure data representation is accurate and dynamic.
+* Calendar: Verify the date selection and filtering functionality.
+* Deployment: Confirm the application loads correctly from GitHub Pages.
+
+Feel free to review the code and design choices, and provide feedback on potential improvements.

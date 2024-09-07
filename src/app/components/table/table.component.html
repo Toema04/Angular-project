@@ -1,0 +1,70 @@
+<div class="p-d-flex p-jc-end p-ai-center mb-2">
+        <p-iconField iconPosition="right" class="ml-auto">
+            <p-inputIcon>
+                <i class="pi pi-search"></i>
+            </p-inputIcon>
+            <input 
+                pInputText 
+                type="text" 
+                (input)="dt.filterGlobal($event.target, 'contains')" 
+                placeholder="Search keyword" />
+        </p-iconField>
+  <button pButton type="button" class="btn" icon="pi pi-sliders-h"></button>
+  <button pButton type="button" class="btn" icon="pi pi-arrow-right-arrow-left"></button>
+</div>
+
+<p-table #dt [value]="users" class="custom-paginator" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5,10,20]" [globalFilterFields]="['userName', 'ticketNumber']">
+  <!-- Table Header -->
+  <ng-template pTemplate="paginatorleft" >
+    <!-- Add custom text or elements on the left -->
+    <div>عرض</div>
+    
+</ng-template>
+<ng-template pTemplate="paginatorright">
+  <!-- Add custom text or elements on the right -->
+  <div>Showing first to last of totalRecords entries</div>
+</ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="index"> # <p-sortIcon field="index"></p-sortIcon></th>
+      <th pSortableColumn="userName"> المستخدم <p-sortIcon field="userName"></p-sortIcon></th>
+      <th pSortableColumn="ticketNumber">Ticket Number <p-sortIcon field="ticketNumber"></p-sortIcon></th>
+      <th pSortableColumn="ticketValue">Ticket Value <p-sortIcon field="ticketValue"></p-sortIcon></th>
+      <th pSortableColumn="cinemaName">Cinema Name <p-sortIcon field="cinemaName"></p-sortIcon></th>
+      <th pSortableColumn="numOfIndividuals">Individuals <p-sortIcon field="numOfIndividuals"></p-sortIcon></th>
+      <th pSortableColumn="numOfPurchases">Purchases <p-sortIcon field="numOfPurchases"></p-sortIcon></th>
+      <th>Ticket</th>
+    </tr>
+  </ng-template>
+
+  <!-- Table Rows -->
+  <ng-template pTemplate="body" let-user>
+    <tr>
+      <td>{{user.index}}</td>
+      <td>
+        <p-avatar label="{{user.userName[0]}}" shape="circle"></p-avatar>
+        <span>{{user.userName}}</span>
+        <br />
+        <small class="subtext">{{user.userId}}</small>
+      </td>
+      <td>{{user.ticketNumber}}</td>
+      <td>{{user.ticketValue}}</td>
+      <td>
+        <span pTooltip="{{user.cinemaAddress}}" tooltipPosition="top">{{user.cinemaName}}</span>
+      </td>
+      <td>{{user.numOfIndividuals}}</td>
+      <td>{{user.numOfPurchases}}</td>
+      <td>
+        <div class="ticketCell-main">
+          <div class="ticketCellIcon">
+        <i class="pi pi-ticket" style="color: #8A74F9;"></i></div>
+        <div class="ticketCellTitle">
+        {{user.ticketName}} <br /><div class="TicketInfoSm">
+          <small class="subtext">{{user.ticketFileSize}} | {{user.ticketFileFormat}}</small>
+        </div></div>
+        <div class="TicketDownloadIcon">
+        <button pButton icon="pi pi-download" class="p-button-text" (click)="downloadTicket(user.ticket)"></button></div></div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

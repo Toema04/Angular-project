@@ -1,0 +1,80 @@
+.coupon-card {
+    background-color: #8465FF;
+    border-radius: 12px;
+    padding: 16px;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    direction: rtl;
+    position: relative;
+    right: 75%;
+  }
+  
+  .coupon-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .coupon-header .delete-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .coupon-content {
+    background-color: #9577FF;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .url-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .url-container span {
+    color: #8465FF;
+  }
+  
+  .url-container button {
+    background: none;
+    border: none;
+    color: #8465FF;
+    cursor: pointer;
+  }
+  
+  .qr-code {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .qr-code img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .coupon-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .discount {
+    background-color: white;
+    color: #8465FF;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .discount-value {
+    font-weight: bold;
+  }

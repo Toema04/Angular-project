@@ -1,0 +1,16 @@
+.demo-chart {
+
+position: absolute;
+width: 839px;
+height: 280px;
+/* left: 465px; */
+top: 10px;
+  }
+  .usage-stats-container {
+    border-radius: 10px;
+  }
+  .chart-container {
+    position: relative;
+    top: 7px;
+    
+  }

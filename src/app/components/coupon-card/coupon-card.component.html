@@ -1,0 +1,29 @@
+<div class="coupon-card">
+    <div class="coupon-header">
+      <span>عرض التذكرة الخاصة بالفيلم</span>
+      <button class="delete-btn">
+        <i class="fa-soild fa-trash"></i>
+      </button>
+    </div>
+    
+    <div class="coupon-content">
+      <div class="url-container">
+        <span>{{ couponUrl }}</span>
+        <button (click)="copyToClipboard()">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+      
+      <div class="qr-code">
+        <img [src]="qrCodeDataUrl" alt="QR Code">
+      </div>
+      
+      <div class="coupon-footer">
+        <span>تنتهي خلال 30 يوم، 2023</span>
+        <div class="discount">
+          <span>خصم</span>
+          <span class="discount-value">25%</span>
+        </div>
+      </div>
+    </div>
+  </div>

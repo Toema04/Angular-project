@@ -1,0 +1,11 @@
+<div class="usage-stats-container">
+  
+    <div class="chart-container">
+      <div echarts [options]="chartOption" class="demo-chart" id="main"><div id="toolbox-dropdown" style="display: none; position: absolute; right: 20px; top: 40px; background: #fff; border: 1px solid #ccc; padding: 5px;">
+        <div>
+          <button (click)="onDropdownChange('monthly')">Monthly</button>
+          <button (click)="onDropdownChange('yearly')">Yearly</button>
+        </div>
+      </div></div>
+    </div>
+  </div>

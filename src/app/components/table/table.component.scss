@@ -1,0 +1,46 @@
+
+:host ::ng-deep {
+  .p-progressbar {
+      height: .5rem;
+      background-color: #D8DADC;
+  
+      .p-progressbar-value {
+          background-color: #607D8B;
+      }
+  }
+}
+.btn {
+  margin-right: 20px;
+}
+
+.p-button.p-button-icon-only {
+  width: 2.357rem;
+  padding: 0.5rem 0;
+  height: 100%;
+
+
+  .pi-download {
+    color: #cb37f1;
+  }
+}
+.ticketCell-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+
+  .ticketCellIcon {
+    padding: 0 21px;
+    background-color: rgba(156, 39, 176, 0.0509803922);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 13px;
+  }
+
+  .pi-ticket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+  }
+}

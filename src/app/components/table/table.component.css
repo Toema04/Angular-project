@@ -1,0 +1,57 @@
+.subtext {
+    color: gray;
+    font-size: smaller;
+  }
+  
+  /* Customizing the ticket box */
+.ticket-box {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(138, 116, 249, 0.1); /* Light #8A74F9 with transparency */
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  color: #8A74F9;
+}
+
+.ticket-box i {
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+}
+
+/* User name styling with subtext */
+.subtext {
+  color: gray;
+  font-size: smaller;
+  
+}
+
+/* Avatar for User Name */
+.p-avatar {
+  margin-right: 0.5rem;
+}
+
+/* Table styling */
+.custom-paginator .ui-paginator {
+  justify-content: flex-start; /* Align paginator to the left */
+
+}
+
+.custom-paginator .ui-paginator-bottom {
+  justify-content: center; /* Center paginator at the bottom */
+}
+.ticketCellIcon{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticketCell-main{
+  display: flex;
+  flex-direction: row;
+
+}
+.ticketCellTitle{
+  flex:1;
+}
+
