@@ -86,10 +86,10 @@ ng build --prod --output-path docs --base-href /angular-dashboard/
 
 3. Push the `docs` folder to the `gh-pages` branch of the repository.
 
-4. Enable GitHub Pages for the repository by setting the source to the `gh-pages` branch.
+4. Enable GitHub Pages for the repository by setting the source to the `gh-pages`.
 
 
-Access the deployed version here: (Angular Dashboard)[]
+Access the deployed version here: ## (Angular Dashboard)[]
 
 ## 6. Evaluation Instructions
 
